@@ -18,10 +18,6 @@ public class CodeForce {
          name[i] = splited[0];
          score[i] = Integer.parseInt(splited[1]);
      }
-     for(int i=0;i<n;i++)
-     {
-         System.out.println("--------"+name[i]+"--"+score[i]+"-------------");
-     }
     
     }    
 }
