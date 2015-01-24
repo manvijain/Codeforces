@@ -45,11 +45,11 @@ public class CodeForce {
                     score_sum = score_sum+score[k];
 
             }
-            System.out.println("total of "+name[i]+" is- "+score_sum);
+            //System.out.println("total of "+name[i]+" is- "+score_sum);
             if(score_sum>max)
             {
                 max = score_sum;
-                System.out.println(name[i]+" has max score");
+                //System.out.println(name[i]+" has max score");
                 count=0;
                 temp_name[count] = name[i];
                 count++;
@@ -64,19 +64,19 @@ public class CodeForce {
                 //append in array;
                 temp_name[count] = name[i];
                 count++;
-                System.out.println(name[i]+" has max score");
+               // System.out.println(name[i]+" has max score");
             }
         }        
     }
     String null_string = null;
-        for(int l=0;l<n;l++)
+        /*for(int l=0;l<n;l++)
         {
             if(temp_name[l] != null)
                 System.out.println("max holder--"+temp_name[l]);
 
-        }
+        }*/
 
-        int first = 0;
+        int first =1000000;
         int first_index=0;
         int temp_count =0;
         int temp_score = 0;
@@ -88,8 +88,11 @@ public class CodeForce {
                 if(name[h].equals(temp_name[temp_count]))
                 {
                     temp_score = temp_score+score[h];
+                    //System.out.println("first"+first+"h"+h);
+                    //System.out.println("temp_score"+temp_score+"max"+max);
                     if(temp_score>=max && first>h)
                     {
+                        //System.out.println("inside if:: first"+first+"h"+h);
                         first = h;
                         first_index = temp_count;
                         break;
@@ -100,6 +103,6 @@ public class CodeForce {
             }
             temp_count++;
         }
-      System.out.println("result: "+temp_name[first_index]);
+      System.out.println(temp_name[first_index]);
     }    
 }
